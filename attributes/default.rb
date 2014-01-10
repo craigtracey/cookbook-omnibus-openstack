@@ -16,10 +16,15 @@
 case platform
 when "fedora", "redhat", "centos" # :pragma-foodcritic: ~FC024 - won't fix this
   default['omnibus-openstack']['platform'] = {
-    'packages' => ['cmake']
+    'packages' => [
+      'cmake',
+    ]
   }
 when "ubuntu", "debian"
   default['omnibus-openstack']['platform'] = {
-    'packages' => ['cmake']
+    'packages' => [
+      'cmake',
+      'ruby-bundler'
+    ]
   }
 end
