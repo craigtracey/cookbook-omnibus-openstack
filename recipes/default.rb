@@ -14,4 +14,4 @@
 # limitations under the License.
 #
 
-include_recipe "build-packages"
+include_recipe "omnibus-openstack::build-packages"
