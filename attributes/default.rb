@@ -24,7 +24,9 @@ when "ubuntu", "debian"
   default['omnibus-openstack']['platform'] = {
     'packages' => [
       'cmake',
-      'ruby-bundler'
+      'git',
+      'ruby-bundler',
+      'rubygems'
     ]
   }
 end
