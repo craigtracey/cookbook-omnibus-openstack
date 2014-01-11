@@ -18,15 +18,14 @@ when "fedora", "redhat", "centos" # :pragma-foodcritic: ~FC024 - won't fix this
   default['omnibus-openstack']['platform'] = {
     'packages' => [
       'cmake',
+      'git'
     ]
   }
 when "ubuntu", "debian"
   default['omnibus-openstack']['platform'] = {
     'packages' => [
       'cmake',
-      'git',
-      'ruby-bundler',
-      'rubygems'
+      'git'
     ]
   }
 end
