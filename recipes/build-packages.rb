@@ -14,10 +14,25 @@
 # limitations under the License.
 #
 
+package "python-software-properties"
+
+bash "havana_repo" do
+  user "root"
+  code <<-EOH
+    add-apt-repository cloud-archive:havana
+    apt-get update
+  EOH
+end
+
 platform_options = node['omnibus-openstack']['platform']
 
 platform_options['packages'].each do |pkg|
   package pkg do
     action :install
   end
+end
+
+# libvirt-dev forgot this for some reason
+link "/usr/lib/libvirt-lxc.so" do
+  to "/usr/lib/libvirt-lxc.so.0.1001.1"
 end

@@ -25,7 +25,11 @@ when "ubuntu", "debian"
   default['omnibus-openstack']['platform'] = {
     'packages' => [
       'cmake',
-      'git'
+      'git',
+      'libvirt-bin',
+      'libvirt-dev',
+      'lxc-dev',
+      'libxen-dev'
     ]
   }
 end
