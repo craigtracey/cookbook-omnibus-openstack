@@ -1,4 +1,4 @@
-name              "cookbook-omnibus-openstack"
+name              "omnibus-openstack"
 maintainer        "Craig Tracey <craigtracey@gmail.com>"
 license           "Apache 2.0"
 description       "Cookbook for supporting omnibus-openstack"
