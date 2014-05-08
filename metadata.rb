@@ -10,3 +10,5 @@ recipe            "omnibus-openstack::build-packages", "Installs packages necess
 %w{ ubuntu fedora redhat centos }.each do |os|
   supports os
 end
+
+depends "omnibus"
